@@ -5,11 +5,11 @@ WORKDIR /app
 
 COPY . .
 
+RUN mkdir -p build && yarn install
+
 RUN yarn install
 
 RUN yarn build
-
-RUN mkdir -p build && yarn install
 
 RUN apt-get update && apt-get install -y nginx-core
 
