@@ -6,17 +6,15 @@ WORKDIR /app
 # Копирование файлов проекта в рабочую директорию
 COPY . .
 
-# Логирование начала процесса установки зависимостей
-RUN echo "Installing dependencies..." && \
-    mkdir -p build && \
+# Создание директории build и установка зависимостей
+RUN mkdir -p build && \
     yarn install
 
-# Логирование окончания установки зависимостей
-RUN echo "Dependencies installed."
-
 # Логирование начала процесса сборки
-RUN echo "Building the app..." && \
-    yarn build
+RUN echo "Building the app..."
+
+# Сборка проекта
+RUN yarn build
 
 # Логирование окончания процесса сборки
 RUN echo "App built successfully."
