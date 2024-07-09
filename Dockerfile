@@ -20,4 +20,4 @@ RUN yarn build
 EXPOSE 8080
 
 # Команда для запуска вашего приложения
-CMD ["yarn", "start"]
+CMD ["yarn", "start", "--verbose"]
