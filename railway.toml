@@ -3,9 +3,8 @@ builder = "nixpacks"
 buildCommand = "yarn install && tsc -b && vite build"
 
 [deploy]
-healthCheckPath = "/ping"
 restartPolicyMaxRetries = 10
-startCommand = "yarn serve"
-healthcheckPath = "/health"
+startCommand = "serve dist"
+healthcheckPath = "/ping"
 healthcheckTimeout = 100
 restartPolicyType = "ON_FAILURE"
