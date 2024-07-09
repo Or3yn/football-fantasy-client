@@ -8,3 +8,6 @@ startCommand = "npx serve -s dist"
 healthcheckPath = "/ping"
 healthcheckTimeout = 100
 restartPolicyType = "ON_FAILURE"
+
+[env]
+NIXPACKS_PATH = "dist"  # Укажите необходимое значение для переменной
