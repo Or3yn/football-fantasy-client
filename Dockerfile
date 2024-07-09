@@ -1,7 +1,7 @@
 # Используйте официальный образ Node.js с поддержкой нужной версии
 FROM node:18
 
-# Set the working directory inside the container
+# Устанавливаем рабочую директорию внутри контейнера
 WORKDIR /app
 
 # Копирование package.json и yarn.lock для установки зависимостей
@@ -19,9 +19,5 @@ RUN yarn build
 # Открытие порта, на котором работает ваше приложение
 EXPOSE 8080
 
-# Команда для запуска вашего приложения с указанием порта и хоста
-# Open port, on which your app works
-EXPOSE 8080
-
-# Command to run your app specifying port and host
-CMD ["yarn", "build", "&&", "yarn", "serve", "--host", "0.0.0.0", "--port", "8080"]
+# Команда для сборки и запуска вашего приложения с указанием порта и хоста
+CMD ["sh", "-c", "yarn serve --host 0.0.0.0 --port 8080"]
