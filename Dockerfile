@@ -1,5 +1,5 @@
 # Use the official Vite Docker image
-FROM vitejs/awesome:v1.2.3
+FROM node:14
 
 # Set the working directory inside the container
 WORKDIR /app
