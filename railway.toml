@@ -1,5 +1,6 @@
+[build]
+builder = "DOCKERFILE"
 [deploy]
 restartPolicyMaxRetries = 10
 healthcheckPath = "/ping"
-healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
