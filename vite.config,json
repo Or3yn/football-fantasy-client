@@ -1,0 +1,11 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// Экспорт конфигурации
+export default defineConfig({
+  plugins: [react()], // Используем плагин React, если нужно
+  server: {
+    port: 8080,
+    host: '0.0.0.0', // Слушаем на всех интерфейсах
+  },
+});
