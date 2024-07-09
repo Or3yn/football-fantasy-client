@@ -4,7 +4,7 @@ buildCommand = "yarn install && tsc -b && vite build"
 
 [deploy]
 restartPolicyMaxRetries = 10
-startCommand = "serve dist"
+startCommand = "npx serve -s dist"
 healthcheckPath = "/ping"
 healthcheckTimeout = 100
 restartPolicyType = "ON_FAILURE"
