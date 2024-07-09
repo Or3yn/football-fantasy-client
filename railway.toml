@@ -6,6 +6,3 @@ restartPolicyMaxRetries = 10
 healthcheckPath = "/ping"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
-
-[env]
-NIXPACKS_PATH = "dist"  # Укажите необходимое значение для переменной
