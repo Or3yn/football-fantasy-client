@@ -1,12 +1,10 @@
 [build]
-builder = "nixpacks"
-buildCommand = "yarn install && tsc -b && vite build"
+builder = "Docker"
 
 [deploy]
 restartPolicyMaxRetries = 10
-startCommand = "npx serve -s dist"
 healthcheckPath = "/ping"
-healthcheckTimeout = 100
+healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
 
 [env]
