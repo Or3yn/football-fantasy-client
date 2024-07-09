@@ -1,23 +1,23 @@
-# Use the official Vite Docker image
-FROM node:14
+# Используйте официальный образ Node.js с поддержкой нужной версии
+FROM node:18
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and yarn.lock to install dependencies
+# Копирование package.json и yarn.lock для установки зависимостей
 COPY package.json yarn.lock ./
 
-# Install dependencies
+# Установка зависимостей
 RUN yarn install --frozen-lockfile
 
-# Copy the rest of your application code
+# Копирование остального кода вашего приложения
 COPY . .
 
-# Build your application
+# Сборка вашего приложения
 RUN yarn build
 
-# Expose the port that your application listens on
+# Открытие порта, на котором работает ваше приложение
 EXPOSE 8080
 
-# Command to run your application
+# Команда для запуска вашего приложения
 CMD ["yarn", "start"]
