@@ -20,4 +20,8 @@ RUN yarn build
 EXPOSE 8080
 
 # Команда для запуска вашего приложения с указанием порта и хоста
-CMD ["yarn", "preview", "--host", "0.0.0.0", "--port", "8080"]
+# Open port, on which your app works
+EXPOSE 8080
+
+# Command to run your app specifying port and host
+CMD ["yarn", "build", "&&", "yarn", "serve", "--host", "0.0.0.0", "--port", "8080"]
