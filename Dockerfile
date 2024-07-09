@@ -20,7 +20,7 @@ RUN yarn build
 RUN yarn global add serve
 
 # Указываем команду для запуска приложения через serve
-CMD ["serve", "-s", "dist", "-l", "8080"]
+CMD ["sh", "-c", "serve -s dist -l ${PORT}"]
 
 # Открываем порт 8080 для доступа
 EXPOSE 8080
