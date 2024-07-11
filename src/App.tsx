@@ -28,7 +28,7 @@ const App: React.FC = () => {
                             <div className="relative group ml-4">
                                 <a href="#"
                                    className="text-gray-700 hover:text-gray-900 font-semibold flex items-center">
-                                    ANALUSIS
+                                    ANALYSIS
                                     <img src="/triangle.svg" alt="Triangle"
                                          className="w-2.5 h-2.5 ml-2 transform transition-transform group-hover:rotate-180"/>
                                 </a>
